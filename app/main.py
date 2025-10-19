@@ -1,6 +1,11 @@
 from typing import Union
-
 from fastapi import FastAPI
+from app.core.database import engine
+from app.models import models
+
+import sys, os
+sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+
 
 app = FastAPI()
 
