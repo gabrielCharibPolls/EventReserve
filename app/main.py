@@ -29,4 +29,5 @@ def get_db():
 def read_clients(db: Session = Depends(get_db)):
     return db.query(models.Client).all()
 
-app.include_router(event_routes.router)
+app.include_router(event_routes.routerClients)
+app.include_router(event_routes.routerReservations)
