@@ -20,7 +20,6 @@ class Client(Base):
 
     reservations = relationship("Reservation", back_populates="client")
 
-
 class Reservation(Base):
     __tablename__ = "reservations"
 
